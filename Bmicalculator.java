@@ -88,6 +88,19 @@ public static double calculateBMI (int unitChoice, double weight, double height)
 			totalBMI = (703 * weight) / (height/height);
 		}
 		return totalBMI;
-	
+		
 }
+		
+		public String determineBMICategory(double bmi) {
+    if (bmi < 18.5) {
+        System.out.println("Underweight");
+    } else if (bmi < 25) {
+        System.out.println("Normal weight");
+    } else if (bmi < 30) {
+        System.out.println("Overweight");
+    } else if (bmi < 35) {
+        System.out.println("Obese");
+	}
+		}
+		return String;
 }
