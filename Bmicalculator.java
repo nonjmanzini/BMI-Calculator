@@ -104,7 +104,7 @@ public static void getBMICategory(double bmi) {
         System.out.println("You are obese.");
 	} else if (bmi >= 35) {
 	System.out.println("You are severly Obese");
-		}
+		} System.out.println
 		
 }
 }
