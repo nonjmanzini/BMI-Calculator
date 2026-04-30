@@ -12,6 +12,10 @@ scan.useLocale(Locale.US);
 
 char repeat;
 
+System.out.println("\n -------------------");
+System.out.println("\n   BMI CALCULATOR   ");
+System.out.println("\n -------------------");
+
 do{
 	int unitChoice = getUnitChoice(scan);
 	double weight = (unitChoice == 1)? getValidInput(scan, "Enter your weight in kilograms: ", 10, 600)
@@ -32,7 +36,9 @@ do{
 	
 	
 }while (repeat == 'Y' || repeat == 'y');
+scan.close();
 }
+
 public static char askToRepeat(Scanner scan){
 	System.out.println("Do you want to repeat please type Y or N");
 	char choice = scan.next().charAt(0);
@@ -98,29 +104,29 @@ public static double calculateBMI (int unitChoice, double weight, double height)
 
 public static void getBMICategory(double bmi) {
     if (bmi < 18.5) {
-        System.out.println("You are underweight.");
+        System.out.println("You are underweight. \n");
     } else if (bmi < 25) {
-        System.out.println("You are normal weight.");
+        System.out.println("You are normal weight. \n");
     } else if (bmi < 30) {
-        System.out.println("You are overweight.");
+        System.out.println("You are overweight. \n");
     } else if (bmi < 35) {
-        System.out.println("You are obese.");
+        System.out.println("You are obese. \n");
 	} else if (bmi >= 35) {
-	System.out.println("You are severly Obese");
+	System.out.println("You are severly Obese. \n");
 		} 
 }
 
 		public static void giveAdvice(double bmi) {
     if (bmi < 18.5) {
-        System.out.println("Being underweight can cause serious health risks. Consider seeing a healthcare provider");
+        System.out.println("Being underweight can cause serious health risks. Consider seeing a healthcare provider. \n");
     } else if (bmi < 25) {
-        System.out.println("Continue with a healthy lifestyle to maintain a healthy weight.");
+        System.out.println("Continue with a healthy lifestyle to maintain a healthy weight.\n");
     } else if (bmi < 30) {
-        System.out.println("Consider reviewing your portion sizes, calorie intake and starting physical activity.");
+        System.out.println("Consider reviewing your portion sizes, calorie intake and starting physical activity. \n");
     } else if (bmi < 35) {
-        System.out.println("To avoid health issues review your portion sizes, calorie intake and start exercising.");
+        System.out.println("To avoid health issues review your portion sizes, calorie intake and start exercising. \n");
 	} else if (bmi >= 35) {
-	System.out.println("It is advisable to see a healthcare practioner for a weight management plan to avoid health complications.");
+	System.out.println("It is advisable to see a healthcare practioner for a weight management plan to avoid health complications. \n");
 		} 
 		
 }
